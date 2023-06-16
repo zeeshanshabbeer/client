@@ -2292,7 +2292,7 @@ Main Header
   position: absolute;
   left: 0px;
   top: 100%;
-  width: 220px;
+  width: 240px;
   z-index: 100;
   padding: 10px 0 0;
   background-color: #ffffff;
@@ -7244,7 +7244,7 @@ Section Title
 ***/
 .services-section {
   position: relative;
-  padding: 120px 0 90px;
+  padding: 80px 0 90px;
   z-index: 2;
 }
 .services-section .sec-title .text {
