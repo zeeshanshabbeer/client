@@ -19,8 +19,27 @@
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+<script src="index.js"></script>
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+  (function () {
+	emailjs.init("cAX_Tuh8IgquJpy6V");
+  })();
+</script>
+<style>
+    .message1 {
+      display: none;
+      margin-top: 10px;
+	  color: green;
+    }
+	.message2 {
+      display: none;
+      margin-top: 10px;
+	  
+    }
+  </style>
 </head>
 
 <body>
@@ -208,29 +227,40 @@
 							<h2 class="title">Contact us</h2>
 
 							<!--Contact Form-->
-							<form method="post" action="https://kodesolution.com/html/2023/digima-html/get" id="contact-form">
+							<div  id="contact-form">
 								<div class="row">
 									<div class="form-group col-lg-12">
-										<input type="text" name="full_name" placeholder="Your Name" required>
+										<input id="name" type="text" name="name" placeholder="Your Name" required>
 									</div>
 
 									<div class="form-group col-lg-12">
-										<input type="email" name="Email" placeholder="Email Address" required>
+										<input id="email" type="email" name="Email" placeholder="Email Address" required>
+									</div>
+									<div>
+										<p class="message2" style="color: red;" id="message2">Please Enter the Email</p>
+									</div>
+
+									<div class="form-group col-lg-12">
+										<input id="phone" type="number" name="phone" placeholder="Phone">
 									</div>
 
                                     <div class="form-group col-lg-12">
-										<input type="text" name="inquiry" placeholder="Inquiry Title" required>
+										<input type="text" id="inquiry" name="inquiry" placeholder="Inquiry Title" required>
 									</div>
 
 									<div class="form-group col-lg-12">
-										<textarea name="message" placeholder="Comment" required></textarea>
+										<textarea id="message" name="message" placeholder="Comment" required></textarea>
 									</div>
 
+									<div>
+										<p class="message1" id="message1">Thank you for submitting!</p>
+									</div>
 									<div class="form-group col-lg-12">
-										<button class="theme-btn btn-style-one hvr-dark" type="submit" name="submit-form"><span class="btn-title">Submit</span></button>
+										<button class="theme-btn btn-style-one hvr-dark" onclick="sendMail()"><span class="btn-title">Submit</span></button>
 									</div>
 								</div>
-							</form>
+							</div>
+							<!-- </form> -->
 						</div>
 						<!--End Contact Form -->
 					</div>
